@@ -1,4 +1,4 @@
-package com.school.api_imobiliaria;
+package school.school.api_imobiliaria;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
