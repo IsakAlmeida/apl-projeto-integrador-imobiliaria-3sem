@@ -1,4 +1,4 @@
-package school.school.api_imobiliaria;
+package school.sptech.api_imobiliaria;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
