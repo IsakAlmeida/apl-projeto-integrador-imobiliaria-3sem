@@ -1,0 +1,22 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.titulo {
+  text-align: center;
+  color: #667eea;
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.titulo h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.header{
+  display: flex;
+  gap: 24px;
+}
