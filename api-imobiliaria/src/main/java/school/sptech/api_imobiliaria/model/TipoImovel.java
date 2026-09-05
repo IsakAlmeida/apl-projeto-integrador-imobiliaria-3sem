@@ -1,5 +1,6 @@
 package school.sptech.api_imobiliaria.model;
 
+
 public class TipoImovel {
     private Integer id;
     private String nome;

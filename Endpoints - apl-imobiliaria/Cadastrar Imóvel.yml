@@ -1,0 +1,30 @@
+info:
+  name: Cadastrar Imóvel
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{local}}/imoveis"
+  body:
+    type: json
+    data: |-
+      {
+        "titulo": "Apartamento",
+        "descricao": "Bem localizado",
+        "preco": 450000.00,
+        "endereco": "Rua dos Pinheiros, 123",
+        "area": 85.5,
+        "quartos": 2,
+        "banheiros": 1,
+        "garagens": 1,
+        "tipo": null
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
