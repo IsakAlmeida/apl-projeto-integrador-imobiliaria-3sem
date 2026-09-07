@@ -1,4 +1,5 @@
 import styles from './CardImovel.module.css';
+import { Link } from 'react-router-dom';
 
 export function CardImovel(props) {
     return (
@@ -26,6 +27,7 @@ export function CardImovel(props) {
                 <b>Tipo:</b> {props.imovel.nome}
             </p>
             <p className={styles.descricao}>{props.imovel.descricao}</p>
+
         </div>
     )
 }
