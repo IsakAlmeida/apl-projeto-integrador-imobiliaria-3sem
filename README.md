@@ -1,88 +1,64 @@
-# Web Imobiliária - Frontend
+# Sistema Imobiliário - Projeto Integrador 3º Semestre
 
-Interface em React para o sistema de imóveis.
+Projeto de integração entre as disciplinas de **Programação Web** (Backend) e **Front-end** (React).
 
-## Pré-requisitos
+Um sistema simples para cadastrar e buscar imóveis.
 
-- Node.js 14+
-- npm
 
 ## Como Rodar
 
-### 1. Instalar Dependências
+### Backend
 
-```bash
-npm install
-```
+1. Entre na pasta `api-imobiliaria`
+2. Crie o banco de dados MySQL rodando o arquivo `schema.sql`
+3. Configure a senha do MySQL em `application.properties`
+4. Clique no botão Play da IDE para rodar
 
-### 2. Rodar em Desenvolvimento
+O backend vai estar em: `http://localhost:8080/imoveis`
 
-```bash
-npm run dev
-```
+### Frontend
 
-A aplicação vai abrir em: `http://localhost:5173`
+1. Entre na pasta `web-imobiliaria`
+2. Rode `npm install`
+3. Rode `npm run dev`
 
-### 3. Build para Produção
+O frontend vai estar em: `http://localhost:5173`
 
-```bash
-npm run build
-```
+## Requisitos Atendidos
 
+-  Cadastro de imóveis com 5+ campos
+-  Tela de cadastro e exibição de dados
+-  Integração com API REST (GET e POST)
+-  Componentização em React
+-  Estado para controlar informações (useState)
+-  JSX na construção das interfaces
+-  CSS Modules para estilização
+-  Tratamento de estados (carregando, sucesso, erro)
+-  Busca de imóvel por ID
+-  Validação de dados no backend
 
-## Páginas
+## Tecnologias Usadas
 
-### Home (`/`)
-- Lista todos os imóveis
-- Botão para cadastrar novo
-- Botão para buscar imóvel
+**Backend:**
+- Java 21
+- Spring Boot
+- MySQL
+- JdbcTemplate
 
-### Cadastro (`/cadastro`)
-- Formulário com 8 campos
-- Valida dados do backend
-- Mostra mensagem de sucesso/erro
-- Redireciona para home após sucesso
-
-### Busca (`/busca`)
-- Busca imóvel por ID
-- Mostra todos os detalhes
-- Mensagem de erro se não encontrar
-
-## 🔌 Integração com API
-A API está configurada em `src/services/api.js`.
-**Base URL:** `http://localhost:8080`
-
-## Componentes
-
-### CardImovel
-Exibe um imóvel em formato de card.
-Props:
-- `imovel` (Object): Dados do imóvel
-
-### FormCadastro
-Formulário para cadastrar novo imóvel.
-Props:
-- `onCadastrar` (Function): Callback quando cadastra
-
-### ListaImoveis
-Lista todos os imóveis em grid.
-Props:
-- `imoveis` (Array): Lista de imóveis
-- `carregando` (Boolean): Se está carregando
-- `onBuscar` (Function): Callback do botão buscar
-
-## Estilos
-Usa CSS Modules para isolação de estilos.
-Cada componente tem seu próprio arquivo `.module.css`.
-
-## Rotas
-/ → Home (lista imóveis)
-/cadastro → Página de cadastro
-/busca → Página de busca
-
-
-## Tecnologias
+**Frontend:**
 - React
 - React Router
-- Axios (requisições HTTP)
+- Axios
 - CSS Modules
+
+## Funcionalidades
+
+- Listar todos os imóveis
+- Cadastrar novo imóvel
+- Buscar imóvel por ID
+- Validação de campos obrigatórios
+- Tratamento de erros
+
+## Autor
+
+Isak de Amorim Almeida - 3ADSB

@@ -1,16 +1,88 @@
-# React + Vite
+# Web Imobiliária - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Interface em React para o sistema de imóveis.
 
-Currently, two official plugins are available:
+## Pré-requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js 14+
+- npm
 
-## React Compiler
+## Como Rodar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Instalar Dependências
 
-## Expanding the Oxlint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### 2. Rodar em Desenvolvimento
+
+```bash
+npm run dev
+```
+
+A aplicação vai abrir em: `http://localhost:5173`
+
+### 3. Build para Produção
+
+```bash
+npm run build
+```
+
+
+## Páginas
+
+### Home (`/`)
+- Lista todos os imóveis
+- Botão para cadastrar novo
+- Botão para buscar imóvel
+
+### Cadastro (`/cadastro`)
+- Formulário com 8 campos
+- Valida dados do backend
+- Mostra mensagem de sucesso/erro
+- Redireciona para home após sucesso
+
+### Busca (`/busca`)
+- Busca imóvel por ID
+- Mostra todos os detalhes
+- Mensagem de erro se não encontrar
+
+## Integração com API
+A API está configurada em `src/services/api.js`.
+**Base URL:** `http://localhost:8080`
+
+## Componentes
+
+### CardImovel
+Exibe um imóvel em formato de card.
+Props:
+- `imovel` (Object): Dados do imóvel
+
+### FormCadastro
+Formulário para cadastrar novo imóvel.
+Props:
+- `onCadastrar` (Function): Callback quando cadastra
+
+### ListaImoveis
+Lista todos os imóveis em grid.
+Props:
+- `imoveis` (Array): Lista de imóveis
+- `carregando` (Boolean): Se está carregando
+- `onBuscar` (Function): Callback do botão buscar
+
+## Estilos
+Usa CSS Modules para isolação de estilos.
+Cada componente tem seu próprio arquivo `.module.css`.
+
+## Rotas
+/ → Home (lista imóveis)
+/cadastro → Página de cadastro
+/busca → Página de busca
+
+
+## Tecnologias
+- React
+- React Router
+- Axios (requisições HTTP)
+- CSS Modules
