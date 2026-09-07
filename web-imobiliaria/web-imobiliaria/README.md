@@ -4,7 +4,7 @@ Interface em React para o sistema de imóveis.
 
 ## Pré-requisitos
 
-- Node.js 14+
+- Node.js
 - npm
 
 ## Como Rodar
