@@ -87,7 +87,14 @@ Retorna um imóvel específico pelo ID.
   "id": 1,
   "titulo": "Apartamento 2 Quartos",
   "preco": 450000,
-  ...
+  "endereco": "Rua Y, 456",
+  "area": 100,
+  "quartos": 3,
+  "banheiros": 2,
+  "garagens": 1,
+  "tipo": {
+    "id": 1
+  }
 }
 ```
 
@@ -127,7 +134,7 @@ Cadastra um novo imóvel.
 
 ## Testes
 
-Use Postman ou Insomnia para testar.
+Use o Bruno para testar.
 
 **Exemplo GET:**
 http://localhost:8080/imoveis
